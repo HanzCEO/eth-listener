@@ -22,12 +22,12 @@ def _build_handler() -> Callable[[NewHeadEvent], None]:
 
 
 def main() -> None:
-    logging.basicConfig(level=logging.DEBUG, format="[%(levelname)s] %(message)s")
+    # logging.basicConfig(level=logging.DEBUG, format="[%(levelname)s] %(message)s")
 
-    transport_logger = logging.getLogger("websockets")
-    transport_logger.setLevel(logging.DEBUG)
+    # transport_logger = logging.getLogger("websockets")
+    # transport_logger.setLevel(logging.DEBUG)
 
-    logging.getLogger("eth_listener").setLevel(logging.DEBUG)
+    # logging.getLogger("eth_listener").setLevel(logging.DEBUG)
 
     listener = EthListener(WS_URL, start_timeout=0)
     handler = _build_handler()
@@ -41,7 +41,7 @@ def main() -> None:
             print(json.dumps(parsed, indent=2))
 
     # uncomment this if you want to see ws json messages
-    listener.add_raw_message_listener(_print_raw_message)
+    # listener.add_raw_message_listener(_print_raw_message)
 
     print(f"Connecting to {WS_URL} for newHeads events… Press Ctrl+C to exit.")
     with listener:
