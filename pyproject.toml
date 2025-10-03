@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "eth-listener"
-version = "0.1.0"
+version = "0.1.1"
 description = "A synchronous callback facade for Ethereum websocket subscriptions backed by asyncio."
 readme = "README.md"
 authors = [
@@ -13,7 +13,7 @@ authors = [
 license = { text = "MIT" }
 requires-python = ">=3.9"
 dependencies = [
-  "web3==7.13.0",
+  "web3>=7.0.0",
 ]
 keywords = ["ethereum", "websocket", "json-rpc", "asyncio", "events"]
 
