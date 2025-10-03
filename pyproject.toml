@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.20.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eth-listener"
+version = "0.1.0"
+description = "A synchronous callback facade for Ethereum websocket subscriptions backed by asyncio."
+readme = "README.md"
+authors = [
+  { name = "Haxors", email = "hanzhaxors@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+  "web3==7.13.0",
+]
+keywords = ["ethereum", "websocket", "json-rpc", "asyncio", "events"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-asyncio>=0.21",
+  "pytest-mock>=3.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/hanzceo/eth-listener"
+Documentation = "https://github.com/hanzceo/eth-listener"
+Source = "https://github.com/hanzceo/eth-listener"
+Issues = "https://github.com/hanzceo/eth-listener/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["eth_listener"]
+include = ["eth_listener/py.typed"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "eth_listener",
+  "README.md",
+  "LICENSE*",
+]
+
+[tool.hatch.metadata.hooks.version]
+path = "eth_listener/__init__.py"
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+addopts = "-ra"
+testpaths = ["tests"]
