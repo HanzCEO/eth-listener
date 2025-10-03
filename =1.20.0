@@ -1,0 +1,10 @@
+Collecting hatchling
+  Using cached hatchling-1.27.0-py3-none-any.whl (75 kB)
+Requirement already satisfied: packaging>=24.2 in ./.venv/lib/python3.11/site-packages (from hatchling) (25.0)
+Collecting pathspec>=0.10.1
+  Using cached pathspec-0.12.1-py3-none-any.whl (31 kB)
+Requirement already satisfied: pluggy>=1.0.0 in ./.venv/lib/python3.11/site-packages (from hatchling) (1.6.0)
+Collecting trove-classifiers
+  Using cached trove_classifiers-2025.9.11.17-py3-none-any.whl (14 kB)
+Installing collected packages: trove-classifiers, pathspec, hatchling
+Successfully installed hatchling-1.27.0 pathspec-0.12.1 trove-classifiers-2025.9.11.17
